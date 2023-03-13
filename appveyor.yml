@@ -23,7 +23,7 @@ init:
       NC=""
     fi
 stack:
-  - `${NODE_STACK}`  
+  - ${NODE_STACK} 
 
 environment:
   expected_default_node: v16.
