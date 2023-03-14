@@ -81,7 +81,7 @@ test_script:
             echo "${RED} nvm cant use version '${version}' ${NC}"
             exit 1
         fi
-        #node --version >${APPVEYOR_BUILD_FOLDER}/${NODE_STACK}.txt
+#        node --version >${APPVEYOR_BUILD_FOLDER}/${NODE_STACK}.txt
         if [ $(node --version) = "v${NODE_STACK}" ]; then
             echo "${GREEN}Correct version ${NODE_STACK}${NC}"
         else
