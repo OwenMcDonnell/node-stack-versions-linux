@@ -22,53 +22,15 @@ init:
       RESET=""
       NC=""
     fi
+    
 stack:
   - ${NODE_STACK} 
 
-environment:
-  expected_default_node: v16.
-  expected_lts_node: v18.
-  expected_stable_node: v19.
-
 
 test_script:
-#     - sh: nvm --version
-#     - sh: nvm list
+     - sh: nvm --version
+     - sh: nvm list
     
-#     - sh: |
-#         echo Default
-#         nv=$(node --version)
-#         echo $nv
-#         if [[ $nv =~ ^$expected_default_node ]]; then
-#             echo "${GREEN}Default Node.js version is Correct${NC}"
-#         else
-#             echo "${RED}Default Node.js version should be '${expected_default_node}.x'${NC}"
-#             exit 1
-#         fi
-
-#     - sh: |
-#         echo LTS
-#         nvm use lts/*
-#         nv=$(node --version)
-#         echo $nv
-#         if [[ $nv =~ ^$expected_lts_node ]]; then
-#             echo "${GREEN}LTS Node.js version is Correct${NC}"
-#         else
-#             echo "${RED}LTS Node.js version should be '${expected_lts_node}.x'${NC}"
-#             exit 1
-#         fi
-
-#     - sh: |
-#         echo Stable
-#         nvm use stable
-#         nv=$(node --version)
-#         echo $nv
-#         if [[ $nv =~ ^$expected_stable_node ]]; then
-#             echo "${GREEN}Stable Node.js version is Correct${NC}"
-#         else
-#             echo "${RED}Stable Node.js version should be '${expected_stable_node}.x'${NC}"
-#             exit 1
-#         fi
 
     - sh: |
         echo "Latest ${NODE_MAJOR}.x:"
